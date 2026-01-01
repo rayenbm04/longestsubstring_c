@@ -50,7 +50,6 @@ void addtotextfile(const char* filename, const char* text) {
         return;
     }
     fprintf(file, "%s   %d\n", text, nb);
-    
     fclose(file);
     return;
 
