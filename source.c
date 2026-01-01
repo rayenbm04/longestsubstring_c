@@ -7,7 +7,7 @@
 
 
 int lengthOfLongestSubstring(char *s) {
-    int freq[256] = {0};   // ASCII characters
+    int freq[256] = {0};
     int left = 0, maxLen = 0;
 
     for (int right = 0; s[right] != '\0'; right++) {
@@ -50,9 +50,12 @@ void addtotextfile(const char* filename, const char* text) {
         return;
     }
     if (isinfile(filename, text)) {
-        return; // Text already exists in file
+        printf("String already exists in file.\n");
+        return; 
     }
     fprintf(file, "%s   %d\n", text, nb);
+    printf("Added: %s with length %d\n", text, nb);
     fclose(file);
+    return;
 
 }
