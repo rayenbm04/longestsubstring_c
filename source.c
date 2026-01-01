@@ -49,12 +49,8 @@ void addtotextfile(const char* filename, const char* text) {
     if (file == NULL) {
         return;
     }
-    if (isinfile(filename, text)) {
-        printf("String already exists in file.\n");
-        return; 
-    }
     fprintf(file, "%s   %d\n", text, nb);
-    printf("Added: %s with length %d\n", text, nb);
+    
     fclose(file);
     return;
 
