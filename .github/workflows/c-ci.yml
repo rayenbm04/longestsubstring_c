@@ -1,0 +1,19 @@
+name: C Build and Test
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Compile Main Application
+      run: gcc main.c source.c -o app
+
+    - name: Compile Unit Tests
+      run: gcc test_runner.c source.c -o run_tests
+
+    - name: Run Unit Tests
+      run: ./run_tests
