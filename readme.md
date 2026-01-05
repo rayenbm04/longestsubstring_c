@@ -40,19 +40,26 @@ The entry point of the program. It manages the user interaction loop:
 * Validates input length and handles empty strings.
 * Orchestrates the logic: Checks the file for duplicates -> Calculates Result -> Writes to file if new -> Prints output.
 
+### Real-Life Use Case
+While this is a classic algorithmic problem, the underlying logic of **Sliding Window** and **substring uniqueness** is used in:
+* **Network Security:** Analyzing packet streams for unique signature patterns without buffering the entire stream.
+* **DNA Sequencing:** Identifying unique gene markers or repeating sequences in long strands of DNA data.
+* **Data Compression:** Algorithms like Lempel-Ziv (LZW) use similar sliding window mechanisms to find repeating occurrences of data to compress files efficiently.
+
 ## 5. Installation and Execution
 
 To run this project on your local machine, follow these steps:
 
-### Clone the Repository
+### Installation & Usage
+
+**1. Clone the Repository**
 Open your terminal and clone the project files:
 ```bash
-git clone [https://github.com/rayenbm04/longestsubstring_c](https://github.com/rayenbm04/longestsubstring_c)
+git clone https://github.com/rayenbm04/longestsubstring_c
 cd longestsubstring_c
-gcc main.c source.c -o main
-./main
-
-this should show up "Enter a string(enter ** to stop):" 
-the programm will tell you to keep entering a string until you write the string "**" 
-
-
+### to run the program
+gcc main.c source.c -o app
+./app
+### to run the tests
+gcc test_runner.c source.c -o run_tests
+./run_tests
